@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx run-many -t dev",
-    "build": "nx build",
+    "dev": "nx run-many -t dev --maxParallel=5",
+    "build": "nx run-many -t build",
+    "copy-to-docs": "rm -rf docs && cp -r packages/common/home/dist docs && cp -r packages/apps/react/dist docs/react && cp -r packages/apps/javascript/dist docs/javascript && cp -r packages/apps/vue/dist docs/vue",
     "test": "nx test"
   },
   "private": true,
@@ -14,7 +15,7 @@
     "nx": "17.1.3"
   },
   "workspaces": [
-    "packages/apps/*",
-    "packages/common/*"
+    "packages/common/*",
+    "packages/apps/*"
   ]
 }

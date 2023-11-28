@@ -10,5 +10,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // base: '/frontend-mini-challenges/react/dist/',
+  server: {
+    port: 6012,
+    strictPort: true,
+  },
+  base: '/frontend-mini-challenges/react/',
 });

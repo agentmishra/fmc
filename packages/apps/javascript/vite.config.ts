@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 import { challenges } from './src/helpers/challenges';
 
-const challengesPath = challenges.map((challenge) => `./src/challenges/${challenge}/index.html`);
+const challengesPath = challenges
+  .filter((challenge) => challenge.link !== '#')
+  .map((challenge) => `./src/challenges/${challenge.link}/index.html`);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,4 +12,9 @@ export default defineConfig({
       input: ['./index.html', ...challengesPath],
     },
   },
+  server: {
+    port: 6011,
+    strictPort: true,
+  },
+  base: '/frontend-mini-challenges/javascript/',
 });

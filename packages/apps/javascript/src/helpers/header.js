@@ -2,7 +2,7 @@ import { challenges } from './challenges.js';
 
 // Add navbar script
 const navbarScript = document.createElement('script');
-navbarScript.src = '../../helpers/navbar.js';
+navbarScript.src = '/frontend-mini-challenges/javascript/src/helpers/navbar.js';
 navbarScript.type = 'module';
 
 // Add style tag
@@ -31,6 +31,6 @@ const headTags = [navbarScript, coreStyles, metaUTF, metaName, metaHTTP, favIcon
 headTags.forEach((tag) => document.head.prepend(tag));
 
 // Add title
-const challengeLink = window.location.pathname.split('challenges/')[1].slice(0, -1);
+const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = challenges.find((challenge) => challenge.link === challengeLink);
 document.title = challenge.title;

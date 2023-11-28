@@ -13,7 +13,7 @@ function Hero() {
         </p>
 
         <h3 className={styles.link}>
-          <a href="native/">JS Mini Challenges</a>
+          <a href="javascript">JS Mini Challenges</a>
         </h3>
 
         <h3 className={styles.link}>
@@ -21,7 +21,7 @@ function Hero() {
         </h3>
 
         <h3 className={styles.link}>
-          <a href="vue/dist/#/">VueJs Mini challenges</a>
+          <a href="vue">VueJs Mini challenges</a>
         </h3>
       </div>
 

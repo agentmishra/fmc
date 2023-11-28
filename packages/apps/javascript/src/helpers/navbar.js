@@ -5,12 +5,12 @@ if (window.location.hostname !== 'localhost' && window.location.hostname !== '12
   addBugFender();
 }
 
-const challengeLink = window.location.pathname.split('challenges/')[1].slice(0, -1);
+const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = challenges.find((challenge) => challenge.link === challengeLink);
 
 const navbarHTML = `
   <div class='left'>
-    <a href="/frontend-mini-challenges/native/" class="back">
+    <a href="/frontend-mini-challenges/javascript/" class="back">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -27,11 +27,11 @@ const navbarHTML = `
     </a>
   </div>
 
-  <h1>${challenge.title}</h1>
+  <h1>${challenge?.title}</h1>
 
   <div class="right">
     ${
-      challenge.youtube
+      challenge?.youtube
         ? `<a href=${challenge.youtube} target="blank" class="youtube">
           <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" alt="youtube solution" />
         </a>`

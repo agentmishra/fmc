@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import Contributor from './Contributor';
-import { contributorsList } from './contributors-list';
-import styles from './contribution.module.scss';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
-import axios from 'axios';
+import Contributor from "./Contributor";
+import { contributorsList } from "./contributors-list";
+import styles from "./contribution.module.scss";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import axios from "axios";
 
 async function getContributors() {
-  const response = await axios.get(
-    'https://api.github.com/repos/sadanandpai/frontend-mini-challenges/contributors?per_page=1000'
+  const response = await axios.get<{ login: string; avatar_url: string }[]>(
+    "https://api.github.com/repos/sadanandpai/frontend-mini-challenges/contributors?per_page=1000"
   );
   return response.data.map((contributor) => ({
     username: contributor.login,
-    avatar: contributor.avatar_url?.match(/\d+/)[0],
+    avatar: contributor.avatar_url?.match(/\d+/)?.[0] ?? "",
   }));
 }
 
@@ -26,7 +26,10 @@ function Contribution() {
 
   useEffect(() => {
     const timer = setInterval(
-      () => setContributors((contributors) => contributors.map((x) => x).sort(() => 0.5 - Math.random())),
+      () =>
+        setContributors((contributors) =>
+          contributors.map((x) => x).sort(() => 0.5 - Math.random())
+        ),
       5000
     );
 

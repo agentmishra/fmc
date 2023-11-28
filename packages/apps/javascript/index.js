@@ -11,7 +11,7 @@ const createAnchorElement = (challenge) => {
     card.classList.add('disabled');
     card.title = 'To be developed';
   } else {
-    card.href = `/src/challenges/${challenge.link}/`;
+    card.href = `/frontend-mini-challenges/javascript/src/challenges/${challenge.link}/`;
     card.classList.add(challenge.difficulty);
   }
 

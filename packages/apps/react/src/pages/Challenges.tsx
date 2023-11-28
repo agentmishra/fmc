@@ -6,13 +6,13 @@ function App() {
   return (
     <>
       <Navbar>
-        <a href="/frontend-mini-challenges/native">JavaScript Mini Challenges</a>
+        <a href="/frontend-mini-challenges/javascript">JavaScript Mini Challenges</a>
         <a href="/frontend-mini-challenges/vue/dist/#/">VueJs Mini Challenges</a>
       </Navbar>
 
       <div className="container text-center">
         <ChallengeGrid />
-        <ScrollBtn/>
+        <ScrollBtn />
       </div>
     </>
   );

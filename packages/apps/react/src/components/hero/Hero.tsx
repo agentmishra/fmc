@@ -11,7 +11,7 @@ function Hero() {
         <p>by solving the collection of challenges from Frontend Mini Challenges</p>
 
         <h3 className={styles.link}>
-          <a href="/frontend-mini-challenges/native/">JS Mini Challenges</a>
+          <a href="/frontend-mini-challenges/javascript/">JS Mini Challenges</a>
         </h3>
 
         <h3 className={styles.link}>
