@@ -1,0 +1,1 @@
+import"./challenges-JjuJeQgF.js";import"./navbar-W71TuEFY.js";const e=document.querySelector(".burger-menu"),t=document.querySelector(".nav-links");e.addEventListener("click",()=>{t.classList.toggle("active")});
