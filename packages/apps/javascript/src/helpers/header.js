@@ -1,14 +1,8 @@
 import { challenges } from './challenges.js';
+import nav from './navbar.js';
+import './core.css';
 
-// Add navbar script
-const navbarScript = document.createElement('script');
-navbarScript.src = '/fmc/javascript/src/helpers/navbar.js';
-navbarScript.type = 'module';
-
-// Add style tag
-const coreStyles = document.createElement('link');
-coreStyles.setAttribute('rel', 'stylesheet');
-coreStyles.setAttribute('href', '../../helpers/core.css');
+document.body.prepend(nav);
 
 const metaUTF = document.createElement('meta');
 metaUTF.setAttribute('charset', 'UTF-8');
@@ -27,7 +21,7 @@ favIcon.setAttribute('type', 'image/svg+xml');
 favIcon.setAttribute('href', '../../logo.svg');
 
 // Add all tagsto the head
-const headTags = [navbarScript, coreStyles, metaUTF, metaName, metaHTTP, favIcon];
+const headTags = [metaUTF, metaName, metaHTTP, favIcon];
 headTags.forEach((tag) => document.head.prepend(tag));
 
 // Add title

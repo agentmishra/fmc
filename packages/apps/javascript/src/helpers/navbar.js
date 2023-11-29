@@ -53,4 +53,4 @@ const navbarHTML = `
 const nav = document.createElement('nav');
 nav.className = 'navbar-app';
 nav.innerHTML = navbarHTML;
-document.body.prepend(nav);
+export default nav;
