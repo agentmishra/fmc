@@ -1,0 +1,1 @@
+import"./challenges-JjuJeQgF.js";import"./navbar-5AA0P7Mt.js";const t=document.getElementById("showDialog"),o=document.getElementById("dialogPopup"),e=document.getElementById("closeDialog");t.addEventListener("click",()=>{o.showModal()});e.addEventListener("click",()=>{o.close("")});
