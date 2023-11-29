@@ -14,5 +14,5 @@ export default defineConfig({
     port: 6012,
     strictPort: true,
   },
-  base: '/frontend-mini-challenges/react/',
+  base: '/fmc/react/',
 });

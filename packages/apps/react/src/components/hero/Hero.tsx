@@ -11,24 +11,20 @@ function Hero() {
         <p>by solving the collection of challenges from Frontend Mini Challenges</p>
 
         <h3 className={styles.link}>
-          <a href="/frontend-mini-challenges/javascript/">JS Mini Challenges</a>
+          <a href="/fmc/javascript/">JS Mini Challenges</a>
         </h3>
 
         <h3 className={styles.link}>
-          <a href="/frontend-mini-challenges/react/dist/#/challenges">React Mini challenges</a>
+          <a href="/fmc/react/dist/#/challenges">React Mini challenges</a>
         </h3>
 
         <h3 className={styles.link}>
-          <a href="/frontend-mini-challenges/vue/dist/#/">VueJs Mini challenges</a>
+          <a href="/fmc/vue/dist/#/">VueJs Mini challenges</a>
         </h3>
       </div>
 
       <figure className={styles.figure}>
-        <img
-          className={styles.heroImage}
-          src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/cover.png"
-          alt="brand"
-        />
+        <img className={styles.heroImage} src="https://github.com/sadanandpai/fmc/raw/main/cover.png" alt="brand" />
         <figcaption>Collection of frontend challenges for learning and interviews</figcaption>
       </figure>
     </main>

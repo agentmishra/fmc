@@ -7,9 +7,7 @@ import { useAutoAnimate } from '@formkit/auto-animate/react';
 import axios from 'axios';
 
 async function getContributors() {
-  const response = await axios.get(
-    'https://api.github.com/repos/sadanandpai/frontend-mini-challenges/contributors?per_page=1000'
-  );
+  const response = await axios.get('https://api.github.com/repos/sadanandpai/fmc/contributors?per_page=1000');
   return response.data.map((contributor) => ({
     username: contributor.login,
     avatar: contributor.avatar_url?.match(/\d+/)[0],

@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <a class="logo" href="/frontend-mini-challenges/">
+    <a class="logo" href="/fmc/">
       <img src="/logo.png" alt="logo" />
       <span>Frontend Mini Challenges</span>
     </a>
@@ -9,7 +9,7 @@
       <slot />
     </div>
 
-    <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
+    <a href="https://github.com/sadanandpai/fmc/" target="blank">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" class="github" />
     </a>
   </nav>

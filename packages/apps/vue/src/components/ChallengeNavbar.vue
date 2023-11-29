@@ -4,7 +4,7 @@
       <RouterLink to="/" class="back">
         &lt;
       </RouterLink>
-      <a class="logo" href="/frontend-mini-challenges/">
+      <a class="logo" href="/fmc/">
         <img src="/logo.png" alt="logo" />
       </a>
     </div>
@@ -12,7 +12,7 @@
     <h1>{{ title }}</h1>
 
     <div class="right">
-      <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="_blank">
+      <a href="https://github.com/sadanandpai/fmc/" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" class="github" />
       </a>
     </div>

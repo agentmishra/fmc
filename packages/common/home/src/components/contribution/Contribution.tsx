@@ -8,7 +8,7 @@ import axios from "axios";
 
 async function getContributors() {
   const response = await axios.get<{ login: string; avatar_url: string }[]>(
-    "https://api.github.com/repos/sadanandpai/frontend-mini-challenges/contributors?per_page=1000"
+    "https://api.github.com/repos/sadanandpai/fmc/contributors?per_page=1000"
   );
   return response.data.map((contributor) => ({
     username: contributor.login,

@@ -16,5 +16,5 @@ export default defineConfig({
     port: 6011,
     strictPort: true,
   },
-  base: '/frontend-mini-challenges/javascript/',
+  base: '/fmc/javascript/',
 });

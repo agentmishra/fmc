@@ -11,15 +11,15 @@ function ChallengeNavbar({ title }: Props) {
         <a href="#/challenges" className={styles.back}>
           &lt;
         </a>
-        <a className={styles.logo} href="/frontend-mini-challenges/">
-          <img src="/frontend-mini-challenges/react/dist/logo.png" alt="logo" />
+        <a className={styles.logo} href="/fmc/">
+          <img src="/fmc/react/dist/logo.png" alt="logo" />
         </a>
       </div>
 
       <h1>{title}</h1>
 
       <div className={styles.right}>
-        <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
+        <a href="https://github.com/sadanandpai/fmc/" target="blank">
           <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" className={styles.github} />
         </a>
       </div>

@@ -14,5 +14,5 @@ export default defineConfig({
     port: 6013,
     strictPort: true,
   },
-  base: "/frontend-mini-challenges/vue/",
+  base: "/fmc/vue/",
 });

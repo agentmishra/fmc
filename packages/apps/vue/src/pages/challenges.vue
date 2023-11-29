@@ -1,7 +1,7 @@
 <template>
   <Navbar>
-    <a href="/frontend-mini-challenges/javascript">JavaScript Mini Challenges</a>
-    <a href="/frontend-mini-challenges/react/dist/#/challenges">React Mini Challenges</a>
+    <a href="/fmc/javascript">JavaScript Mini Challenges</a>
+    <a href="/fmc/react/dist/#/challenges">React Mini Challenges</a>
   </Navbar>
 
   <div className="container text-center">

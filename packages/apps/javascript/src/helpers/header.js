@@ -2,7 +2,7 @@ import { challenges } from './challenges.js';
 
 // Add navbar script
 const navbarScript = document.createElement('script');
-navbarScript.src = '/frontend-mini-challenges/javascript/src/helpers/navbar.js';
+navbarScript.src = '/fmc/javascript/src/helpers/navbar.js';
 navbarScript.type = 'module';
 
 // Add style tag

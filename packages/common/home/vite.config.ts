@@ -14,5 +14,5 @@ export default defineConfig({
     port: 6010,
     strictPort: true,
   },
-  base: "/frontend-mini-challenges/",
+  base: "/fmc/",
 });

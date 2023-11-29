@@ -10,7 +10,7 @@ const challenge = challenges.find((challenge) => challenge.link === challengeLin
 
 const navbarHTML = `
   <div class='left'>
-    <a href="/frontend-mini-challenges/javascript/" class="back">
+    <a href="/fmc/javascript/" class="back">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -22,8 +22,8 @@ const navbarHTML = `
       </svg>
 
     </a>
-    <a class="logo" href="/frontend-mini-challenges/">
-      <img src="https://sadanandpai.github.io/frontend-mini-challenges/react/dist/logo.png" alt="logo" />
+    <a class="logo" href="/fmc/">
+      <img src="https://sadanandpai.github.io/fmc/react/dist/logo.png" alt="logo" />
     </a>
   </div>
 
@@ -38,7 +38,7 @@ const navbarHTML = `
         : ''
     }
 
-    <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank" class="github">
+    <a href="https://github.com/sadanandpai/fmc/" target="blank" class="github">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
