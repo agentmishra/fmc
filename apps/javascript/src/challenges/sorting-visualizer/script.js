@@ -1,3 +1,6 @@
+const generateBtn = document.getElementById('generate');
+const playBtn = document.getElementById('play');
+
 const n = 9; //number of bars to sort
 const array = [];
 init();
@@ -64,3 +67,6 @@ function showBars(move) {
     container.appendChild(bar);
   }
 }
+
+generateBtn.addEventListener('click', init);
+playBtn.addEventListener('click', play);
