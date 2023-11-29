@@ -1,1 +1,0 @@
-import"./core-AU6WUMqB.js";import"./header--GlDkHT9.js";import"./challenges-Uq9k6NgB.js";import"./navbar-ksQ5k0G6.js";const e=document.getElementById("themeSwitch"),t=document.getElementById("innnerThemeSwitch");e.addEventListener("change",function(){e.checked?(document.body.classList.add("dark"),t.checked=!0):(document.body.classList.remove("dark"),t.checked=!1)});
