@@ -1,4 +1,5 @@
 import { challenges } from './challenges.js';
+import logo from '../../logo.png';
 
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = challenges.find((challenge) => challenge.link === challengeLink);
@@ -18,7 +19,7 @@ const navbarHTML = `
 
     </a>
     <a class="logo" href="/fmc/">
-      <img src="https://sadanandpai.github.io/fmc/react/dist/logo.png" alt="logo" />
+      <img src=${logo} alt="logo" />
     </a>
   </div>
 
@@ -53,4 +54,4 @@ const navbarHTML = `
 const nav = document.createElement('nav');
 nav.className = 'navbar-app';
 nav.innerHTML = navbarHTML;
-export default nav;
+document.body.prepend(nav);

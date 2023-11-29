@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <a class="logo" href="/fmc/">
-      <img src="/logo.png" alt="logo" />
+      <img src="https://github.com/sadanandpai/fmc/raw/main/shared/assets/logo.png" alt="logo" />
       <span>Frontend Mini Challenges</span>
     </a>
 

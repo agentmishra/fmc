@@ -5,7 +5,7 @@
         &lt;
       </RouterLink>
       <a class="logo" href="/fmc/">
-        <img src="/logo.png" alt="logo" />
+        <img src="https://github.com/sadanandpai/fmc/raw/main/shared/assets/logo.png" alt="logo" />
       </a>
     </div>
 

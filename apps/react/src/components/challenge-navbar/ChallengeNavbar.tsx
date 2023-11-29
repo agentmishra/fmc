@@ -1,4 +1,4 @@
-import styles from "./challenge-navbar.module.scss";
+import styles from './challenge-navbar.module.scss';
 
 interface Props {
   title?: string;
@@ -12,7 +12,7 @@ function ChallengeNavbar({ title }: Props) {
           &lt;
         </a>
         <a className={styles.logo} href="/fmc/">
-          <img src="/fmc/react/dist/logo.png" alt="logo" />
+          <img src="https://github.com/sadanandpai/fmc/raw/main/shared/assets/logo.png" alt="logo" />
         </a>
       </div>
 
@@ -20,11 +20,7 @@ function ChallengeNavbar({ title }: Props) {
 
       <div className={styles.right}>
         <a href="https://github.com/sadanandpai/fmc/" target="blank">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-            alt="github repo"
-            className={styles.github}
-          />
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" className={styles.github} />
         </a>
       </div>
     </nav>

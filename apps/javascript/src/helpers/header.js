@@ -1,8 +1,6 @@
 import { challenges } from './challenges.js';
-import nav from './navbar.js';
+import './navbar.js';
 import './core.css';
-
-document.body.prepend(nav);
 
 const metaUTF = document.createElement('meta');
 metaUTF.setAttribute('charset', 'UTF-8');
@@ -18,7 +16,7 @@ metaHTTP.setAttribute('content', 'IE=edge');
 const favIcon = document.createElement('link');
 favIcon.setAttribute('rel', 'icon');
 favIcon.setAttribute('type', 'image/svg+xml');
-favIcon.setAttribute('href', '../../logo.svg');
+favIcon.setAttribute('href', 'https://github.com/sadanandpai/fmc/raw/main/shared/assets/logo.png');
 
 // Add all tagsto the head
 const headTags = [metaUTF, metaName, metaHTTP, favIcon];

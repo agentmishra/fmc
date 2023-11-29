@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nx run-many -t dev --maxParallel=5",
     "build": "nx run-many -t build",
-    "copy-to-docs": "rm -rf docs && cp -r packages/common/home/dist docs && cp -r packages/apps/react/dist docs/react && cp -r packages/apps/javascript/dist docs/javascript && cp -r packages/apps/vue/dist docs/vue",
+    "copy-to-docs": "rm -rf docs && cp -r apps/host/dist docs && cp -r apps/javascript/dist docs/javascript && cp -r apps/react/dist docs/react && cp -r apps/vue/dist docs/vue",
     "test": "nx test"
   },
   "private": true,
@@ -15,7 +15,6 @@
     "nx": "17.1.3"
   },
   "workspaces": [
-    "packages/common/*",
-    "packages/apps/*"
+    "apps/*"
   ]
 }
