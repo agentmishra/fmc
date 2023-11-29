@@ -1,10 +1,5 @@
 import { challenges } from './challenges.js';
 
-if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-  addClarity();
-  addBugFender();
-}
-
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = challenges.find((challenge) => challenge.link === challengeLink);
 
