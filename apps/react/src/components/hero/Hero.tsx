@@ -24,7 +24,11 @@ function Hero() {
       </div>
 
       <figure className={styles.figure}>
-        <img className={styles.heroImage} src="https://github.com/sadanandpai/fmc/raw/main/cover.png" alt="brand" />
+        <img
+          className={styles.heroImage}
+          src="https://github.com/sadanandpai/fmc/raw/main/shared/assets/cover.png"
+          alt="brand"
+        />
         <figcaption>Collection of frontend challenges for learning and interviews</figcaption>
       </figure>
     </main>

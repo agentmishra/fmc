@@ -28,7 +28,7 @@ function Hero() {
       <figure className={styles.figure}>
         <img
           className={styles.heroImage}
-          src="https://github.com/sadanandpai/fmc/raw/main/cover.png"
+          src="https://github.com/sadanandpai/fmc/raw/main/shared/assets/cover.png"
           alt="brand"
         />
         <figcaption>

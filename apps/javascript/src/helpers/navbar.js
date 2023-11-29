@@ -1,5 +1,4 @@
 import { challenges } from './challenges.js';
-import logo from '../../logo.png';
 
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = challenges.find((challenge) => challenge.link === challengeLink);
@@ -19,7 +18,7 @@ const navbarHTML = `
 
     </a>
     <a class="logo" href="/fmc/">
-      <img src=${logo} alt="logo" />
+      <img src='https://github.com/sadanandpai/fmc/raw/main/shared/assets/logo.png' alt="logo" />
     </a>
   </div>
 
