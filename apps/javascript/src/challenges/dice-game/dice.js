@@ -1,39 +1,33 @@
-let randomnum1 = Math.floor(Math.random() * 6) + 1;
-const randomimg = 'dice' + randomnum1 + '.png';
-const imgsource1 = 'images/' + randomimg;
-const image1 = document.querySelectorAll('img')[0]; //.setAttribute('src', imgsource1);
-let randomnum2 = Math.floor(Math.random() * 6) + 1;
-const imgsource2 = 'images/' + 'dice' + randomnum2 + '.png';
-const image2 = document.querySelectorAll('img')[1];
-const button = document.querySelector('button');
-image1.setAttribute('src', imgsource1);
-image2.setAttribute('src', imgsource2);
+import diceImg1 from './images/dice1.png';
+import diceImg2 from './images/dice2.png';
+import diceImg3 from './images/dice3.png';
+import diceImg4 from './images/dice4.png';
+import diceImg5 from './images/dice5.png';
+import diceImg6 from './images/dice6.png';
 
-if (randomnum1 > randomnum2) {
-  document.querySelector('h1').innerHTML = 'Player1 Wins!';
-  document.getElementById("result").innerHTML = 'Player1 Wins!';
-} else if (randomnum1 < randomnum2) {
-  document.querySelector('h1').innerHTML = 'Player2 Wins!';
-  document.getElementById("result").innerHTML = 'Player2 Wins!';
-} else {
-  document.querySelector('h1').innerHTML = 'DRAW!';
-  document.getElementById("result").innerHTML = 'DRAW!';
+const diceImgs = [diceImg1, diceImg2, diceImg3, diceImg4, diceImg5, diceImg6];
+const image1 = document.querySelector('.img1');
+const image2 = document.querySelector('.img2');
+const playBtn = document.querySelector('.play');
+
+function play() {
+  const randomnum1 = Math.floor(Math.random() * 6);
+  const randomnum2 = Math.floor(Math.random() * 6);
+  image1.setAttribute('src', diceImgs[randomnum1]);
+  image2.setAttribute('src', diceImgs[randomnum2]);
+
+  showResult(randomnum1, randomnum2);
 }
 
-button.addEventListener('click', () => {
-  randomnum1 = Math.floor(Math.random() * 6) + 1 ;
-  randomnum2 = Math.floor(Math.random() * 6) + 1 ;
-  image1.setAttribute('src', 'images/' + 'dice' + randomnum1 + '.png');
-  image2.setAttribute('src', 'images/' + 'dice' + randomnum2 + '.png');
-
+function showResult(randomnum1, randomnum2) {
   if (randomnum1 > randomnum2) {
-    document.querySelector('h1').innerHTML = 'Player1 Wins!';
-    document.getElementById("result").innerHTML = 'Player1 Wins!';
+    document.getElementById('result').innerHTML = 'Player1 Wins!';
   } else if (randomnum1 < randomnum2) {
-    document.querySelector('h1').innerHTML = 'Player2 Wins!';
-    document.getElementById("result").innerHTML = 'Player2 Wins!';
+    document.getElementById('result').innerHTML = 'Player2 Wins!';
   } else {
-    document.querySelector('h1').innerHTML = 'DRAW!';
-    document.getElementById("result").innerHTML = 'DRAW!';
+    document.getElementById('result').innerHTML = 'DRAW!';
   }
-});
+}
+
+playBtn.addEventListener('click', play);
+play();

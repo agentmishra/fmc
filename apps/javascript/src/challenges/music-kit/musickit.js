@@ -1,11 +1,19 @@
+import tom1 from './sounds/tom-1.mp3';
+import tom2 from './sounds/tom-2.mp3';
+import tom3 from './sounds/tom-3.mp3';
+import tom4 from './sounds/tom-4.mp3';
+import snare from './sounds/snare.mp3';
+import crash from './sounds/crash.mp3';
+import kick from './sounds/kick-bass.mp3';
+
 const sounds = new Map([
-  ['w', 'sounds/tom-1.mp3'],
-  ['a', 'sounds/tom-2.mp3'],
-  ['s', 'sounds/tom-3.mp3'],
-  ['d', 'sounds/tom-4.mp3'],
-  ['j', 'sounds/snare.mp3'],
-  ['k', 'sounds/crash.mp3'],
-  ['l', 'sounds/kick-bass.mp3'],
+  ['w', tom1],
+  ['a', tom2],
+  ['s', tom3],
+  ['d', tom4],
+  ['j', snare],
+  ['k', crash],
+  ['l', kick],
 ]);
 
 const numberOfDrumButtons = document.querySelectorAll('.drum').length;

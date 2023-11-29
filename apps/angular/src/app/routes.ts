@@ -9,38 +9,56 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'machine-coding',
+    path: 'challenges',
     component: ChallengeContainerComponent,
     children: [
       {
         path: 'counter',
-        loadComponent: () => import('./machine-coding/counter/counter.component').then((m) => m.CounterComponent),
+        loadComponent: () =>
+          import('./challenges/counter/counter.component').then(
+            (m) => m.CounterComponent
+          ),
         data: { title: 'counter' },
       },
       {
         path: 'guess-number',
-        loadComponent: () => import('./machine-coding/guess-number/guess-number.component').then((m) => m.GuessNumberComponent),
+        loadComponent: () =>
+          import('./challenges/guess-number/guess-number.component').then(
+            (m) => m.GuessNumberComponent
+          ),
         data: { title: 'Guess number' },
       },
       {
         path: 'stack',
-        loadComponent: () => import('./machine-coding/stack/stack.component').then((m) => m.StackComponent),
+        loadComponent: () =>
+          import('./challenges/stack/stack.component').then(
+            (m) => m.StackComponent
+          ),
         data: { title: 'Stack' },
       },
       {
         path: 'tic-tac-toe',
-        loadComponent: () => import('./machine-coding/tic-tac-toe/tic-tac-toe/tic-tac-toe.component').then((m) => m.TicTacToeComponent),
+        loadComponent: () =>
+          import(
+            './challenges/tic-tac-toe/tic-tac-toe/tic-tac-toe.component'
+          ).then((m) => m.TicTacToeComponent),
         data: { title: 'Tic tac toe' },
       },
       {
         path: 'todo-list',
-        loadComponent: () => import('./machine-coding/todo-list/todo-app/todo-app.component').then((m) => m.TodoAppComponent),
+        loadComponent: () =>
+          import('./challenges/todo-list/todo-app/todo-app.component').then(
+            (m) => m.TodoAppComponent
+          ),
         data: { title: 'Todo list' },
       },
 
       {
         path: 'word-count',
-        loadComponent: () => import('./machine-coding/word-count/word-count.component').then((m) => m.WordCountComponent),
+        loadComponent: () =>
+          import('./challenges/word-count/word-count.component').then(
+            (m) => m.WordCountComponent
+          ),
         data: { title: 'Word count' },
       },
     ],
