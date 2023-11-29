@@ -9,7 +9,7 @@ const challengesPath = challenges
 export default defineConfig({
   build: {
     rollupOptions: {
-      input: ['./index.html', ...challengesPath],
+      input: ['./index.html', './src/helpers/navbar.js', ...challengesPath],
     },
   },
   server: {
