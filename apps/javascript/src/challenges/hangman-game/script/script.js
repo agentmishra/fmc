@@ -1,4 +1,15 @@
 import { wordList } from './word-list.js';
+import hangman0 from '../images/hangman-0.svg';
+import hangman1 from '../images/hangman-1.svg';
+import hangman2 from '../images/hangman-2.svg';
+import hangman3 from '../images/hangman-3.svg';
+import hangman4 from '../images/hangman-4.svg';
+import hangman5 from '../images/hangman-5.svg';
+import hangman6 from '../images/hangman-6.svg';
+import lost from '../images/lost.gif';
+import victory from '../images/victory.gif';
+
+const hangmanImgs = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6];
 
 const hangmanImg = document.querySelector('.img-container img');
 const wordListContainer = document.querySelector('.correctWord-list');
@@ -63,7 +74,7 @@ function createKeyBoard() {
 // check for win or lose
 function checkWinOrLoose(isWin) {
   modal.classList.add('show-modal');
-  modalImg.src = `./images/${isWin ? 'victory' : 'lost'}.gif`;
+  modalImg.src = isWin ? victory : lost;
   modalResult.innerText = `${isWin ? 'You are awesome' : 'Game Over'}`;
   modalCorrectWord.innerText = correctWordList;
   playAgain.addEventListener('click', main);
@@ -85,7 +96,7 @@ function playGame() {
       } else {
         countToWrongGuesses++;
         wrongGuess.innerText = `${countToWrongGuesses} / ${maxGuesses}`;
-        hangmanImg.src = `./images/hangman-${countToWrongGuesses}.svg`;
+        hangmanImg.src = hangmanImgs[countToWrongGuesses];
       }
       key.disabled = true;
       key.classList.add('disabled');

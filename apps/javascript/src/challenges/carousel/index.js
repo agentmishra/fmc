@@ -1,3 +1,9 @@
+import img1 from './images/1.jpg';
+import img2 from './images/2.jpg';
+import img3 from './images/3.jpg';
+import img4 from './images/4.jpg';
+import img5 from './images/5.jpg';
+
 const carouselEl = document.getElementById('carousel');
 const leftHandleEl = document.getElementById('leftHandle');
 const rightHandleEl = document.getElementById('rightHandle');
@@ -8,7 +14,15 @@ const autoPlayIntervalEl = document.getElementById('autoplayInterval');
 class Carousel {
   constructor(
     carousel,
-    { images, leftHandle, rightHandle, isInfinite = true, autoPlay = false, autoPlayInterval = 5000, selected = 0 }
+    {
+      images,
+      leftHandle,
+      rightHandle,
+      isInfinite = true,
+      autoPlay = false,
+      autoPlayInterval = 5000,
+      selected = 0,
+    }
   ) {
     this.carousel = carousel;
     this.images = images;
@@ -117,7 +131,7 @@ class Carousel {
     imageHolder.classList.add('img-holder');
     this.images.forEach((image) => {
       const img = document.createElement('img');
-      img.src = `./${image}`;
+      img.src = image;
       imageHolder.appendChild(img);
     });
     imageFrame.appendChild(imageHolder);
@@ -147,7 +161,7 @@ class Carousel {
 }
 
 const carousel = new Carousel(carouselEl, {
-  images: ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/5.jpg'],
+  images: [img1, img2, img3, img4, img5],
   selected: 0,
   leftHandle: leftHandleEl,
   rightHandle: rightHandleEl,
