@@ -1,8 +1,21 @@
+import blue from './sounds/blue.mp3';
+import green from './sounds/green.mp3';
+import red from './sounds/red.mp3';
+import yellow from './sounds/yellow.mp3';
+import wrong from './sounds/wrong.mp3';
+
 // Initialize variables
 let userClickedPattern = [];
 let started = false;
 let level = 0;
 let buttonColours = ['red', 'blue', 'green', 'yellow'];
+const sounds = new Map([
+  ['red', new Audio(red)],
+  ['blue', new Audio(blue)],
+  ['green', new Audio(green)],
+  ['yellow', new Audio(yellow)],
+  ['wrong', new Audio(wrong)],
+]);
 let gamePattern = [];
 
 // Add click event listeners to buttons
@@ -11,7 +24,6 @@ for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function () {
     let userChosenColour = this.id;
     userClickedPattern.push(userChosenColour);
-    console.log(userClickedPattern);
     playSound(userChosenColour);
     animatePress(userChosenColour);
     checkAnswer(userClickedPattern.length - 1);
@@ -35,7 +47,6 @@ function nextSequence() {
   let randomNumber = Math.floor(Math.random() * 4);
   let randomChosenColor = buttonColours[randomNumber];
   gamePattern.push(randomChosenColor);
-  console.log(randomNumber);
 
   // Simulate button animation
   let buttonElement = document.getElementById(randomChosenColor);
@@ -48,8 +59,7 @@ function nextSequence() {
 
 // Function to play sound
 function playSound(name) {
-  let audio = new Audio('sounds/' + name + '.mp3');
-  audio.play();
+  sounds.get(name).play();
 }
 
 // Function to animate button press
@@ -64,22 +74,19 @@ function animatePress(currentColor) {
 // Function to check user's answer
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] == userClickedPattern[currentLevel]) {
-    console.log('success');
     if (userClickedPattern.length == gamePattern.length) {
       setTimeout(function () {
         nextSequence();
       }, 1000);
     }
   } else {
-    let audio = new Audio('wrong.mp3');
-    audio.play();
+    sounds.get('wrong').play();
     document.body.classList.add('game-over');
     setTimeout(function () {
       document.body.classList.remove('game-over');
     }, 200);
     document.getElementById('level-title').textContent = 'Game Over, Press Any Key to Restart';
     startOver();
-    console.log('wrong');
   }
 }
 

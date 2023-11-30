@@ -48,7 +48,7 @@ function resetGameState() {
   currentWordList = [];
   correctWordList = word;
   displayLists(correctWordList);
-  hangmanImg.src = './images/hangman-0.svg';
+  hangmanImg.src = hangman0;
   hintText.innerText = hint;
   wrongGuess.classList.add('wrong-guesses');
   countToWrongGuesses = 0;
