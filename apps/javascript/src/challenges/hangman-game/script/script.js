@@ -1,3 +1,5 @@
+import { wordList } from './word-list.js';
+
 const hangmanImg = document.querySelector('.img-container img');
 const wordListContainer = document.querySelector('.correctWord-list');
 const hintText = document.querySelector('.hint-text b');
