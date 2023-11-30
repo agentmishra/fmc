@@ -15,11 +15,11 @@ function Hero() {
         </h3>
 
         <h3 className={styles.link}>
-          <a href="/fmc/react/dist/#/challenges">React Mini challenges</a>
+          <a href="/fmc/react/">React Mini challenges</a>
         </h3>
 
         <h3 className={styles.link}>
-          <a href="/fmc/vue/dist/#/">VueJs Mini challenges</a>
+          <a href="/fmc/vue/">VueJs Mini challenges</a>
         </h3>
       </div>
 
