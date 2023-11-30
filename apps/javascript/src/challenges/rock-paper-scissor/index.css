@@ -6,7 +6,8 @@ h1 {
   margin-top: 20px;
 }
 
-.choice, .c-choice {
+.choice,
+.c-choice {
   width: 100px;
   height: 100px;
   cursor: pointer;

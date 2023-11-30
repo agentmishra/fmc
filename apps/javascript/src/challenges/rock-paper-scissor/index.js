@@ -1,4 +1,11 @@
+import rock from './images/rock.png';
+import paper from './images/paper.png';
+import scissors from './images/scissors.png';
+
 const choices = ['rock', 'paper', 'scissors'];
+const choicesImgs = [rock, paper, scissors];
+const computerChoiceImg = document.getElementById('computer-choice');
+const player = document.querySelector('#player');
 
 function getResult(player, computer) {
   if (player === computer) return "It's a draw!";
@@ -17,19 +24,16 @@ function displayResult(result) {
   resultElement.textContent = result; // Set the result text
 }
 
-document.querySelectorAll('.choice').forEach((element) => {
-  element.addEventListener('click', () => {
-    const playerChoice = element.id;
-    const computerChoice = choices[Math.floor(Math.random() * 3)];
-    const computerChoiceImage = document.getElementById('computer-choice');
+player.addEventListener('click', (event) => {
+  if (event.target.className.includes('choice')) {
+    const playerChoice = event.target.id;
+    const randomChoice = Math.floor(Math.random() * 3);
 
-    // Show the computer's choice element
+    // Show the computer's choice
     document.getElementById('computer').style.display = 'block';
+    computerChoiceImg.src = choicesImgs[randomChoice];
 
-    // Update the computer's choice image
-    computerChoiceImage.src = `${computerChoice}.png`;
-
-    const result = getResult(playerChoice, computerChoice);
+    const result = getResult(playerChoice, choices[randomChoice]);
     displayResult(result);
-  });
+  }
 });
